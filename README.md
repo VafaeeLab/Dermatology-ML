@@ -20,8 +20,8 @@ We perform LZP - Local Z Projection on the slices and convert the 3D image to a 
 
 <table>
   <tr>
-    <td>AMH</td>
-     <td>LM</td>
+    <td>AMH - Local Z Projection</td>
+     <td>LM - Local Z Projection</td>
    
   </tr>
   <tr>
