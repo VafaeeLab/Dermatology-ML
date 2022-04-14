@@ -14,7 +14,7 @@ Machine learning based lung cancer prediction models have been proposed to assis
 
 1- Download the ML Study train dataset from <> link and extract both training dataset and test folders inside the dataset_histopathology.
 
-2. There are 2 folders of different classes of cancer cells - LM and AMH.
+2- There are 2 folders of different classes of cancer cells - LM and AMH.
 The images originally were stacked in folders patient-wise for both LM and AMH. There are multiple Viva Stacks inside a folder and each viva stack has around 32 images (slices).
 We perform LZP - Local Z Projection on the slices and convert the 3D image to a 2D slice.
 
@@ -51,8 +51,8 @@ The Directory Structure is as follows:<br/>
 |	|	|	|-- v0003
 ... 
  ```
-There is a slice level classification of cells as well which classifies an image as LM/AMH/Non Cancer.
-The excel sheet (.csv) file is uploaded for the same denoting the 3 different classes.<br/>
+There is a slice level classification of cells as well which classifies an image as LM/AMH. <br/>
+
 
 ## FOLDERS within this repo<br/>
 
@@ -69,10 +69,10 @@ The excel sheet (.csv) file is uploaded for the same denoting the 3 different cl
 
 To run training script:
 Arguments:
-**cross_val**: If you wish to go with cross validation of the models, switch to true else false (by   default, it is false)
-**epochs**: specify the number of passes of the entire training dataset the machine learning algorithm has completed
-**model_name**: Specify the model to be used (List of available model names - densenet169, resnet101, resnet50, inceptionv3)
-**batch_size**: specify the batch size with this argument<br/>
+* **cross_val**: If you wish to go with cross validation of the models, switch to true else false (by   default, it is false)
+* **epochs**: specify the number of passes of the entire training dataset the machine learning algorithm has completed
+* **model_name**: Specify the model to be used (List of available model names - densenet169, resnet101, resnet50, inceptionv3)
+* **batch_size**: specify the batch size with this argument<br/>
  
 ```!python3 Training/train.py --cross_val True --epochs 10 --model_name densenet169 --batch_size 15 ```  (for 5 fold cross validation)<br/>
 
@@ -84,8 +84,8 @@ Arguments:
 To run the testing script:
 
 Arguments:<br/>
-**test_for_cross_val**: If you wish to go with cross validation of the models, switch to true else false (by   default, it is false)
-**model_name**: Specify the model to be used (List of available model names - densenet169, resnet101, resnet50, inceptionv3)<br/>
+* **test_for_cross_val**: If you wish to go with cross validation of the models, switch to true else false (by   default, it is false)
+* **model_name**: Specify the model to be used (List of available model names - densenet169, resnet101, resnet50, inceptionv3)<br/>
 
 ```!python3 Testing/test.py --test_for_cross_val True --model_name densenet169```  (if you have performed cross validation)<br/>
 ```!python3 Testing/test.py --model_name densenet169```  (if not done cross validation)<br/>
@@ -94,8 +94,8 @@ Arguments:<br/>
 
 To run the visualization script:<br/>
 Arguments:<br/>
-**cross_val_done**: If you performed cross validation of the models, switch to true else false (by   default, it is false)<br/>
-**neural_network_used**: Specify the model which was used during training and testing (List of available model names - densenet169, resnet101, resnet50, inceptionv3)<br/>
+* **cross_val_done**: If you performed cross validation of the models, switch to true else false (by   default, it is false)<br/>
+* **neural_network_used**: Specify the model which was used during training and testing (List of available model names - densenet169, resnet101, resnet50, inceptionv3)<br/>
 
 
 This code snippet is for visualizing the gradcam heatmaps<br/>
@@ -107,9 +107,9 @@ For visualizing the roc-auc plots:<br/>
 For generating test metrics including roc curves for individual algos <br/>
 ```!python3 Visualization/evaluate_model.py --algorithm_used svm  ```
 
-**algorithm_used**: Specify the algorithm used in the code<br/>
-**neural_network_used**: Specify the model which was used during training and testing (List of available model names - densenet169, resnet101, resnet50, inceptionv3)
-**done_cross_val**: If you performed cross validation of the models, switch to true else false<br/>
+* **algorithm_used**: Specify the algorithm used in the code<br/>
+* **neural_network_used**: Specify the model which was used during training and testing (List of available model names - densenet169, resnet101, resnet50, inceptionv3)
+* **done_cross_val**: If you performed cross validation of the models, switch to true else false<br/>
 
 ```!python3 Visualization/evaluate_model.py --algorithm_used neural_net --neural_network_used densenet169 --done_cross_val True ```  (if you have used neural network)
 
