@@ -16,39 +16,53 @@ Machine learning based lung cancer prediction models have been proposed to assis
 
 2- There are 2 folders of different classes of cancer cells - LM and AMH.
 The images originally were stacked in folders patient-wise for both LM and AMH. There are multiple Viva Stacks inside a folder and each viva stack has around 32 images (slices).
-We perform LZP - Local Z Projection on the slices and convert the 3D image to a 2D slice.
+We perform LZP - Local Z Projection on the slices and convert the 3D image to a 2D slice. <br/>
+
+<table>
+  <tr>
+    <td>AMH</td>
+     <td>LM</td>
+   
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/34694650/163324638-c12fee38-18b9-4381-af2c-ae9aff10d543.jpg" width=480 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/34694650/163324774-2c89dd49-bb33-457a-8094-167f169ff6cc.jpg" width=480 height=480></td>
+    
+  </tr>
+ </table>
+
 
 The Directory Structure is as follows:<br/>
 ```
 |LM /
 |  |-- 1344\
 |	|	|-- viva stack 0001\
-|	|	|	|-- v0001
-|	|	|	|-- v0002
-|	|	|	|-- v0003
+|	|	|	|-- v00000001
+|	|	|	|-- v00000002
+|	|	|	|-- v00000003
 ... 
 
 |  |-- 1511\
 |	|	|-- viva stack 0001\
-|	|	|	|-- v0001
-|	|	|	|-- v0002
-|	|	|	|-- v0003
+|	|	|	|-- v00000001
+|	|	|	|-- v00000002
+|	|	|	|-- v00000003
 ... 
 
 
 |AMH /
 |  |-- 4151\
 |	|	|-- viva stack 0001\
-|	|	|	|-- v0001
-|	|	|	|-- v0002
-|	|	|	|-- v0003
+|	|	|	|-- v00000001
+|	|	|	|-- v00000002
+|	|	|	|-- v00000003
 ... 
 
 |  |-- 4207\
 |	|	|-- viva stack 0001\
-|	|	|	|-- v0001
-|	|	|	|-- v0002
-|	|	|	|-- v0003
+|	|	|	|-- v00000001
+|	|	|	|-- v00000002
+|	|	|	|-- v00000003
 ... 
  ```
 There is a slice level classification of cells as well which classifies an image as LM/AMH. <br/>
