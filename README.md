@@ -12,7 +12,7 @@ Machine learning based lung cancer prediction models have been proposed to assis
 
 ## Using the Dataset
 
-1- Download the ML Study train dataset from <> link and extract both training dataset and test folders inside the dataset_histopathology.
+1- Download the ML Study train dataset from https://tinyurl.com/Training-data and extract both training dataset and test folders inside the dataset_histopathology.
 
 2- There are 2 folders of different classes of cancer cells - LM and AMH.
 The images originally were stacked in folders patient-wise for both LM and AMH. There are multiple Viva Stacks inside a folder and each viva stack has around 32 images (slices).
