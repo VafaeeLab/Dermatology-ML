@@ -93,9 +93,14 @@ Arguments:
 * **model_name**: Specify the model to be used (List of available model names - densenet169, resnet101, resnet50, inceptionv3)
 * **batch_size**: specify the batch size with this argument<br/>
  
-```!python3 Training/train.py --cross_val True --epochs 10 --model_name densenet169 --batch_size 15 ```  (for 5 fold cross validation)<br/>
+``` bash 
+!python3 Training/train.py --cross_val True --epochs 10 --model_name densenet169 --batch_size 15 
+```  
+(for 5 fold cross validation)<br/>
 
-```!python3 Training/train.py --epochs 10 --model_name densenet169 --batch_size 15```
+``` bash 
+!python3 Training/train.py --epochs 10 --model_name densenet169 --batch_size 15
+```
 
 
 ## Testing model on dataset -
@@ -106,8 +111,15 @@ Arguments:<br/>
 * **test_for_cross_val**: If you wish to go with cross validation of the models, switch to true else false (by   default, it is false)
 * **model_name**: Specify the model to be used (List of available model names - densenet169, resnet101, resnet50, inceptionv3)<br/>
 
-```!python3 Testing/test.py --test_for_cross_val True --model_name densenet169```  (if you have performed cross validation)<br/>
-```!python3 Testing/test.py --model_name densenet169```  (if not done cross validation)<br/>
+``` bash
+!python3 Testing/test.py --test_for_cross_val True --model_name densenet169
+``` 
+(if you have performed cross validation)<br/>
+
+``` bash
+!python3 Testing/test.py --model_name densenet169
+```  
+(if not done cross validation)<br/>
 
 ## Visualization - 
 
@@ -118,21 +130,35 @@ Arguments:<br/>
 
 
 This code snippet is for visualizing the gradcam heatmaps<br/>
-```!python3 Visualization/gradcam.py ``` (generate gradcam heatmaps for densenet169)<br/>
+``` bash
+!python3 Visualization/gradcam.py 
+``` 
+(generate gradcam heatmaps for densenet169) <br/>
 
 For visualizing the roc-auc plots:<br/>
-```!python3 Visualization/roc_all_algos.py --neural_network_used densenet169 --cross_val_done True ``` (for roc curves)<br/>
+``` bash 
+!python3 Visualization/roc_all_algos.py --neural_network_used densenet169 --cross_val_done True 
+``` 
+(for roc curves)<br/>
 
 For generating test metrics including roc curves for individual algos <br/>
-```!python3 Visualization/evaluate_model.py --algorithm_used svm  ```
+``` bash
+!python3 Visualization/evaluate_model.py --algorithm_used svm  
+```
 
 * **algorithm_used**: Specify the algorithm used in the code<br/>
 * **neural_network_used**: Specify the model which was used during training and testing (List of available model names - densenet169, resnet101, resnet50, inceptionv3)
 * **done_cross_val**: If you performed cross validation of the models, switch to true else false<br/>
 
-```!python3 Visualization/evaluate_model.py --algorithm_used neural_net --neural_network_used densenet169 --done_cross_val True ```  (if you have used neural network)
+``` bash
+!python3 Visualization/evaluate_model.py --algorithm_used neural_net --neural_network_used densenet169 --done_cross_val True 
+```  
+(if you have used neural network)
 
 For visualizing boxplots and violin plots <br/>
-```!python3 Visualization/boxplot.py --neural_network_used densenet169 ``` (for generating boxplot and violinplot)
+``` bash
+!python3 Visualization/boxplot.py --neural_network_used densenet169 
+``` 
+(for generating boxplot and violinplot)
 
 
