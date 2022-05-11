@@ -79,6 +79,12 @@ There is a slice level classification of cells as well which classifies an image
 7.	Models: Contains the architectures of different neural networks used in the classification process
 8.	Figures: Stores the figures generated after running the visualization scripts of the heatmaps, box plots, ROC - AUC and other visualization figures
 
+**Note**
+In every file, which includes the snippet below, 
+```bash 
+sys.path.append('')
+```
+add your own full path to the cloned repository. 
 ***Model followed (Structure)***<br/>
 
 
