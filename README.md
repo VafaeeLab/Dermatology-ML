@@ -85,6 +85,8 @@ In every file, which includes the snippet below,
 sys.path.append('')
 ```
 add your own full path to the cloned repository. 
+<br>
+
 ***Model followed (Structure)***<br/>
 
 
