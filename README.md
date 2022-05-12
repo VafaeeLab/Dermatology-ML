@@ -1,4 +1,4 @@
-# Derm-ML
+# Dermatology-ML
 ## Description
 
 Following repository demonstrates machine learning architectures that can correctly classify lesions between LM and AIMP(elsewhere known as atypical melanocytic hyperplasia, or AMH). Overall, our methods showcase the potential for computer-aided diagnosis in dermatology, which, in conjunction with remote acquisition can expand the range of diagnostic tools in the community. 
